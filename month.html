@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="month.css">
+</head>
+
+<body>
+    <div class="container bg-">
+        <nav>
+            <h1 class="text-light"> NUMBERS OF DAYS OF THE MONTH</h1>
+        </nav>
+        <br>
+        <div class="input-group mb-3">
+            <label class="input-group-text fw-bold" id="inputGroupSelect01">Month</label>
+            <select class="form-select" id="inputGroupSelect011">
+                <option selected></option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+        </div>
+
+        <div class="input-group flex-nowrap">
+            <!-- <span class="input-group-text" id="addon-wrapping">@</span> -->
+            <input type="text" class="form-control" placeholder="" aria-label="output" aria-describedby="addon-wrapping"
+                id="inputGroupSelect02" disabled>
+        </div>
+        <div class="but-div">
+            <button onclick="checkMe$()">CHECK</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let inputGroupSelect011 = document.getElementById('inputGroupSelect011')
+    let inputGroupSelect02 = document.getElementById('inputGroupSelect02')
+    inputGroupSelect02.style.fontWeight = 'bold'
+    inputGroupSelect011.style.fontWeight = 'bold'
+
+
+    function checkMe$() {
+        if (inputGroupSelect011.value == 'January') {
+            inputGroupSelect02.value = 'There are 31 days in January';
+        } else if (inputGroupSelect011.value == 'February') {
+            inputGroupSelect02.value = 'There are 29 days in February';
+        } else if (inputGroupSelect011.value == 'March') {
+            inputGroupSelect02.value = 'There are 31 days in March';
+        } else if (inputGroupSelect011.value == 'April') {
+            inputGroupSelect02.value = 'There are 30 days in April';
+        } else if (inputGroupSelect011.value == 'May') {
+            inputGroupSelect02.value = 'There are 31 days in May';
+        } else if (inputGroupSelect011.value == 'June') {
+            inputGroupSelect02.value = 'There are 30 days in June';
+        } else if (inputGroupSelect011.value == 'July') {
+            inputGroupSelect02.value = 'There are 31 days in July';
+        } else if (inputGroupSelect011.value == 'August') {
+            inputGroupSelect02.value = 'There are 31 days in August';
+        } else if (inputGroupSelect011.value == 'September') {
+            inputGroupSelect02.value = 'There are 30 days in September';
+        } else if (inputGroupSelect011.value == 'October') {
+            inputGroupSelect02.value = 'There are 31 days in October';
+        } else if (inputGroupSelect011.value == 'November') {
+            inputGroupSelect02.value = 'There are 30 days in November';
+        } else if (inputGroupSelect011.value == 'December') {
+            inputGroupSelect02.value = 'There are 31 days in December';
+        }
+        else {
+            inputGroupSelect02.value = '--------select a Month of the year---------';
+        }
+
+    }
+
+</script>
